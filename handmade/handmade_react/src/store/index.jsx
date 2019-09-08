@@ -5,6 +5,7 @@ import { saga } from '../sagas'
 import RootReducer from '../reducers'
 
 const sagaMiddleware = createSagaMiddleware();
+const initialState = {};
 const enhans = []
 const middleware = [
   thunk,
@@ -26,6 +27,7 @@ const composedEnhancers = compose(
 
 const store = createStore(
   RootReducer,
+  initialState,
   composedEnhancers
 )
 
