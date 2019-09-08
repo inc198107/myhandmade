@@ -1,20 +1,21 @@
-import React, { Component } from 'react';
-import { Route, Switch } from 'react-router-dom'
+import React from 'react';
+import {useRoutes} from 'hookrouter';
 import { Container } from '@material-ui/core';
 import Landing from './LandingPage/landing';
 import AdminPage from './AdminPanel/adminLogin';
 
 
-class App extends Component {
-  render() {
+const routes = {
+  '/' : () => <Landing/>,
+  '/admin' : () => <AdminPage/>
+};
+
+function App (){
+  const routerResult = useRoutes(routes);
     return (
       <Container maxWidth='xl'>
-        <Switch>
-          <Route patch="/" exact component={Landing} />
-          <Route patch="/admin" component={AdminPage} />
-        </Switch>
+       {routerResult}
       </Container>
     )
   }
-}
 export default App;
