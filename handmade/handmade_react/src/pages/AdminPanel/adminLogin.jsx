@@ -26,7 +26,7 @@ function AdminPage() {
             <Input name="password" type="password" placeholder="Password" className={style.field} />
             <Button type="button" size="medium" variant="contained">
                 Login
-            </Button>
+            </Button> 
         </Paper>
     )
 }

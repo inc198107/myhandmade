@@ -1,24 +1,20 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Switch} from 'react-router-dom'
+import { Route, Switch } from 'react-router-dom'
 import { Container } from '@material-ui/core';
-import Landing from './LandingPage';
-import AdminPage from './AdminPanel';
+import Landing from './LandingPage/landing';
+import AdminPage from './AdminPanel/adminLogin';
 
 
 class App extends Component {
   render() {
     return (
-      <Router>
-        <Container maxWidth='lg'>
-          <Switch>
-            <Route  patch='/' exact component={Landing} />
-            <Route patch='/admin' component={AdminPage} />
-          </Switch>
-        </Container>
-      </Router>
+      <Container maxWidth='xl'>
+        <Switch>
+          <Route patch="/" exact component={Landing} />
+          <Route patch="/admin" component={AdminPage} />
+        </Switch>
+      </Container>
     )
   }
-
 }
-
 export default App;

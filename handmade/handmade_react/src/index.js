@@ -1,8 +1,9 @@
-import React from 'react'
-import ReactDOM from "react-dom"
-import { Provider } from 'react-redux'
-import store from './store'
-import App from './pages/App'
+import React from 'react';
+import ReactDOM from "react-dom";
+import { Provider } from 'react-redux';
+import { BrowserRouter } from "react-router-dom";
+import store from './store';
+import App from './pages/App';
 import * as serviceWorker from "./serviceWorker";
 
 import './index.css'
@@ -13,7 +14,9 @@ store.subscribe(() => {
 
 ReactDOM.render(
   <Provider store={store}>
-    <App />
+    <BrowserRouter>
+      <App/>
+    </BrowserRouter>
   </Provider>,
   document.getElementById("root")
 )
