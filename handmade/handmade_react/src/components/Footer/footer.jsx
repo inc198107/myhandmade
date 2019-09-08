@@ -21,6 +21,7 @@ const useStyles = makeStyles({
         height:'75px',
         objectFit:'contain'  
     }
+    
 })
 
 export default function Footer() {

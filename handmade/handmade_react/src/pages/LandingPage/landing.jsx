@@ -17,7 +17,7 @@ export default function Landing() {
     return (
         <Fragment>
             <div className={style.main}>
-                <h1>HELLO WORLD!</h1>
+                <h1>Handmade</h1>
             </div>
             <Footer />
         </Fragment>

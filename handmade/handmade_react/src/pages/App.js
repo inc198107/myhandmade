@@ -9,7 +9,7 @@ const routes = {
   '/admin' : () => <AdminPage/>
 };
 
-function App (){
+ export default function App (){
   const routerResult = useRoutes(routes);
     return (
       <Container maxWidth='xl'>
@@ -17,4 +17,4 @@ function App (){
       </Container>
     )
   }
-export default App;
+
