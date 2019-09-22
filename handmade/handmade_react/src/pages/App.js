@@ -4,6 +4,7 @@ import { Container } from '@material-ui/core';
 import Landing from './LandingPage/landing';
 import AdminPage from './AdminPanel/adminLogin';
 
+
 const routes = {
   '/' : () => <Landing/>,
   '/admin' : () => <AdminPage/>
