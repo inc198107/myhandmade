@@ -24,8 +24,38 @@ code {
 }
 
 @font-face {
+  font-family: "Bernard-Scriptic";
+  src: url('../src/assets/fonts/bernardScriptic.ttf') format('truetype');
+  font-style: italic;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Bernard-Scriptic";
+  src: url('../src/assets/fonts/bernardScriptic.ttf') format('truetype');
+  font-style: normal;
+  font-weight: bold;
+}
+
+@font-face {
   font-family: "Eutemia";
   src: url('../src/assets/fonts/Eutemia.ttf') format('truetype');
   font-style: normal;
   font-weight: normal;
+}
+
+
+@font-face {
+  font-family: "Eutemia";
+  src: url('../src/assets/fonts/Eutemia.ttf') format('truetype');
+  font-style: italic;
+  font-weight: normal;
+}
+
+
+@font-face {
+  font-family: "Eutemia";
+  src: url('../src/assets/fonts/Eutemia.ttf') format('truetype');
+  font-style: normal;
+  font-weight: bold;
 }
