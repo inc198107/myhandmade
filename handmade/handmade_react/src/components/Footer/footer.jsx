@@ -67,7 +67,7 @@ export default function Footer() {
             </div>
             <span className={style.year}>2019</span>
             <div className={style.contacts}>
-                <A href='/contacts'>Contacts</A>
+                <A href='/contacts'>Contact Us</A>
             </div>
         </div>
     )

@@ -1,24 +1,27 @@
 import React from 'react';
-import {useRoutes} from 'hookrouter';
+
+import { useRoutes } from 'hookrouter';
 import { Container } from '@material-ui/core';
 
+import Theme from '../components/theme/theme';
 import Landing from './LandingPage/landing';
 import AdminPage from './AdminPanel/adminLogin';
-import Contacts from './contacts/contacts'
-
+import Contacts from './contacts/contacts';
 
 const routes = {
-  '/' : () => <Landing/>,
-  '/admin' : () => <AdminPage/>,
-  '/contacts':()=> <Contacts/>
+  '/': () => <Landing />,
+  '/admin': () => <AdminPage />,
+  '/contacts': () => <Contacts />
 };
 
- export default function App (){
+export default function App() {
   const routerResult = useRoutes(routes);
-    return (
-      <Container maxWidth='xl'>
-       {routerResult}
+  return (
+    <Theme>
+      <Container maxWidth='lg'>
+        {routerResult}
       </Container>
-    )
-  }
+    </Theme>
+  )
+}
 

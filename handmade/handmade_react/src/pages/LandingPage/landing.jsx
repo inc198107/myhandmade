@@ -1,10 +1,11 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 
-import mainBckgr from '../../assets/images/meshok.jpg'
+import mainBckgr from '../../assets/images/meshok.jpg';
 
 import Footer from '../../components/Footer/footer';
-import Autorize from '../../components/LandingComponents/Autorise/Autorize'
+import Autorize from '../../components/LandingComponents/Autorise/Autorize';
+import GalleryCard from '../../components/GalleryCard/GalleryCard';
 
 const useStyles = makeStyles({
     main: {
@@ -38,6 +39,13 @@ const useStyles = makeStyles({
         gridRowStart: '1',
         gridRowEnd: '2'
     },
+    galleryOne:{
+        gridColumnStart: '1',
+        gridColumnEnd: '3',
+        gridRowStart: '2',
+        gridRowEnd: '4',
+        marginLeft:'20px'
+    },
     main_backgr: {
         backgroundImage: `url(${mainBckgr})`,
         boxSizing: 'border-box'
@@ -54,6 +62,9 @@ export default function Landing() {
                 </div>
                 <div className={style.login} >
                     <Autorize/>
+                </div>
+                <div className={style.galleryOne}>
+                    <GalleryCard/>
                 </div>
             </div>
             <Footer />

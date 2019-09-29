@@ -7,9 +7,14 @@
 body {
   margin: 0;
   height: 100%;
+  background-image: url(./assets/images/wooden2.jpg);
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+#root{
+  position: relative;
 }
 
 code {
@@ -58,4 +63,25 @@ code {
   src: url('../src/assets/fonts/Eutemia.ttf') format('truetype');
   font-style: normal;
   font-weight: bold;
+}
+
+@font-face {
+  font-family: "Aramis-Bold";
+  src: url('../src/assets/fonts/AramisItalic.ttf') format('truetype');
+  font-style: normal;
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "Aramis-Italic";
+  src: url('../src/assets/fonts/AramisItalic.ttf') format('truetype');
+  font-style: italic;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Aramis";
+  src: url('../src/assets/fonts/AramisItalic.ttf') format('truetype');
+  font-style: normal ;
+  font-weight: normal;
 }

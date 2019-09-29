@@ -1,5 +1,6 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
+import Roll from 'react-reveal/Roll';
 import { Paper } from '@material-ui/core';
 
 import { A } from 'hookrouter';
@@ -11,21 +12,9 @@ import telegram from '../../assets/icons/telegram.svg'
 import message from '../../assets/icons/message.svg'
 
 const useStyles = makeStyles({
-    background: {
-        backgroundImage: `url(${mainBckgr})`,
-        opacity: '0.3',
-        position: 'relative',
-        width: '100%',
-        height: '100vh',
-        zIndex: '-10'
-    },
     wrapper: {
-        position: 'absolute',
-        top: '0',
-        left: '0',
-        display: 'flex',
-        width: '100%',
         height: '100vh',
+        display: 'flex',
         justifyContent: 'center',
         alignItems: 'center'
     },
@@ -34,7 +23,7 @@ const useStyles = makeStyles({
         height: '400px',
         display: 'flex',
         flexDirection: 'column',
-        backgroundImage: `url(${mainBckgr})`
+        backgroundImage: `url(${mainBckgr})`,
     },
     logo: {
         with: '30px',
@@ -74,7 +63,7 @@ const useStyles = makeStyles({
         justifyContent: 'flex-start',
         alignItems: 'center',
         color: 'rgba(255, 255, 255, 0.82)',
-        fontSize:'20px'
+        fontSize: '20px'
     }
 
 })
@@ -83,10 +72,8 @@ export default function Contacts() {
 
     const style = useStyles();
     return (
-        <Fragment>
-            <div className={style.background}>
-            </div>
-            <div className={style.wrapper}>
+        <div className={style.wrapper}>
+            <Roll top>
                 <Paper className={style.contacts_window}>
                     <A className={style.head} href='/'>
                         <img className={style.logo} src={scissors} alt='logo' />
@@ -108,7 +95,7 @@ export default function Contacts() {
                     </div>
                     <A className={`${style.head} ${style.home}`} href='/'>Home</A>
                 </Paper>
-            </div>
-        </Fragment>
+            </Roll>
+        </div>
     )
 }
