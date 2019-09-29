@@ -5,7 +5,7 @@ import mainBckgr from '../../assets/images/meshok.jpg';
 
 import Footer from '../../components/Footer/footer';
 import Autorize from '../../components/LandingComponents/Autorise/Autorize';
-import GalleryCard from '../../components/GalleryCard/GalleryCard';
+import LandingGallery from '../../components/LandingComponents/LandingGallery/LandingGallery';
 
 const useStyles = makeStyles({
     main: {
@@ -16,7 +16,6 @@ const useStyles = makeStyles({
         height: 'calc(100vh - 60px)',
         justifyContent: 'center',
         margin: '0',
-
     },
     header: {
         display: 'flex',
@@ -44,7 +43,6 @@ const useStyles = makeStyles({
         gridColumnEnd: '3',
         gridRowStart: '2',
         gridRowEnd: '4',
-        marginLeft:'20px'
     },
     main_backgr: {
         backgroundImage: `url(${mainBckgr})`,
@@ -64,7 +62,7 @@ export default function Landing() {
                     <Autorize/>
                 </div>
                 <div className={style.galleryOne}>
-                    <GalleryCard/>
+                    <LandingGallery/>
                 </div>
             </div>
             <Footer />
