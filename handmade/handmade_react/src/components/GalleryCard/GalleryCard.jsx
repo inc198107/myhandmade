@@ -79,8 +79,8 @@ const GalleryCard = (props) => {
 }
 
 GalleryCard.propTypes = {
-    top: PropTypes.number.isRequired,
-    left: PropTypes.number.isRequired,
+    top: PropTypes.string.isRequired,
+    left: PropTypes.string.isRequired,
     rt: PropTypes.bool,
     img: PropTypes.string.isRequired,
     imgName: PropTypes.string.isRequired
@@ -89,7 +89,9 @@ GalleryCard.propTypes = {
 GalleryCard.defaultProps = {
     img: placeholder,
     imgName: 'Something Beauty',
-    rt: false
+    rt: false,
+    top:'0px',
+    left:'0px'
 }
 
 export default GalleryCard

@@ -30,8 +30,8 @@ const useStyle = makeStyles({
  const LandingGallery = (props) => {
     const style = useStyle();
     const { imagesArr, categoryName } = props;
-    const galery = imagesArr.map((i) => (
-        <GalleryCard key={i} img={i.img} imgName={i.name} rt={true} top='70px'/>
+    const galery = imagesArr.map((el, index) => (
+        <GalleryCard key={index} img={el.img} imgName={el.name} rt={true} top='70px'/>
     ))
 
     return (
