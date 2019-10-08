@@ -7,6 +7,8 @@ import Footer from '../../components/Footer/footer';
 import Autorize from '../../components/LandingComponents/Autorise/Autorize';
 import LandingGallery from '../../components/LandingComponents/LandingGallery/LandingGallery';
 
+import images from '../../assets/tempGallery/tempGallery';
+
 const useStyles = makeStyles({
     main: {
         display: 'grid',
@@ -50,7 +52,7 @@ const useStyles = makeStyles({
     }
 })
 
-export default function Landing() {
+const  Landing = () => {
     const style = useStyles();
     return (
         <div className={style.main_backgr} >
@@ -62,10 +64,12 @@ export default function Landing() {
                     <Autorize/>
                 </div>
                 <div className={style.galleryOne}>
-                    <LandingGallery/>
+                    <LandingGallery imagesArr={images}/>
                 </div>
             </div>
             <Footer />
         </div>
     )
 }
+
+export default Landing

@@ -1,12 +1,13 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core';
 
-import placeholder from '../../assets/icons/img_placeholder.svg'
+import placeholder from '../../assets/icons/img_placeholder.svg';
 
 const useStyle = makeStyles({
     container: {
         boxShadow: '3px 2px 2px rgba(15, 15, 15, 0.7)',
-        border:'1px solid rgba(15, 15, 15, 0.5)',
+        border: '1px solid rgba(15, 15, 15, 0.5)',
         position: 'absolute',
         width: '320px',
         height: '350px',
@@ -50,26 +51,45 @@ const useStyle = makeStyles({
 
 
 
-export default function GalleryCard(props) {
+const GalleryCard = (props) => {
     const style = useStyle();
-    const { top, left} = props;
+    const { top, left, rt, img, imgName } = props;
 
-    const rotate = () => {
-        let rand = -8 - 0.5 + Math.random() * 13;
-        return Math.round(rand)
+    const rotate = (rot) => {
+        if (rot) {
+            let rand = -8 - 0.5 + Math.random() * 13;
+            return Math.round(rand)
+        }
+        else return 0
     }
 
     return (
         <div
             className={style.container}
-            style={{ top: `${top}`, left: `${left}`,transform:`rotate(${rotate()}deg)`}}
+            style={{ top: `${top}`, left: `${left}`, transform: `rotate(${rotate(rt)}deg)` }}
         >
             <div className={style.imageWrapper}>
-                <img src={props.img || placeholder} alt='something beauty' />
+                <img src={img} alt='something beauty' />
             </div>
             <div className={style.imageName}>
-                <span>{props.imgName || 'Something Beauty'}</span>
+                <span>{imgName}</span>
             </div>
         </div>
     )
 }
+
+GalleryCard.propTypes = {
+    top: PropTypes.number.isRequired,
+    left: PropTypes.number.isRequired,
+    rt: PropTypes.bool,
+    img: PropTypes.string.isRequired,
+    imgName: PropTypes.string.isRequired
+}
+
+GalleryCard.defaultProps = {
+    img: placeholder,
+    imgName: 'Something Beauty',
+    rt: false
+}
+
+export default GalleryCard

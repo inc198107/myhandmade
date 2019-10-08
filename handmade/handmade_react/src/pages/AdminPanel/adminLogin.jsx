@@ -17,7 +17,7 @@ const useStyles = makeStyles({
         }
 })
 
-function AdminPage() {
+const AdminPage = () => {
     const style = useStyles();
     return (
         <Paper className={style.form}>

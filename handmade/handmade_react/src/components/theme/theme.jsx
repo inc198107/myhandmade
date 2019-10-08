@@ -95,7 +95,7 @@ const useStyles = makeStyles({
     }
 })
 
-export default function Theme(props) {
+const  Theme = (props) => {
     const style = useStyles();
     const yearTime = () => {
         let mounth = Number(moment().format('M'));
@@ -138,3 +138,5 @@ export default function Theme(props) {
         </Fragment>
     )
 }
+
+export default Theme

@@ -68,7 +68,7 @@ const useStyles = makeStyles({
 
 })
 
-export default function Contacts() {
+const Contacts = () => {
 
     const style = useStyles();
     return (
@@ -99,3 +99,5 @@ export default function Contacts() {
         </div>
     )
 }
+
+export default Contacts
