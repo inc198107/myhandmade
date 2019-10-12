@@ -32,7 +32,7 @@ const useStyles = makeStyles({
 })
 
 
-export default function Autorize(){
+const Autorize = () => {
     const style = useStyles();
     return(
         <div className={style.main}>
@@ -40,3 +40,5 @@ export default function Autorize(){
         </div>
     )
 }
+
+export default Autorize
