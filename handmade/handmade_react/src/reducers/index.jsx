@@ -1,6 +1,7 @@
 import { combineReducers } from 'redux';
 
-export default combineReducers({
-  
+import fetchGalleryImages from './getImages'
 
+export default combineReducers({
+    fetchGalleryImages
 })

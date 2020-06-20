@@ -1,13 +1,16 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+
+import { galeryLoadInit } from '../../Actions/galleryActions';
 
 import mainBckgr from '../../assets/images/meshok.jpg';
+
 
 import Footer from '../../components/Footer/footer';
 import Autorize from '../../components/LandingComponents/Autorise/Autorize';
 import LandingGallery from '../../components/LandingComponents/LandingGallery/LandingGallery';
-
-import images from '../../assets/tempGallery/tempGallery';
 
 const useStyles = makeStyles({
     main: {
@@ -52,8 +55,14 @@ const useStyles = makeStyles({
     }
 })
 
-const  Landing = () => {
+const  Landing = (props) => {
     const style = useStyles();
+    const { galeryLoadInit, imgArr  } = props;
+    
+    useEffect(() => {
+        galeryLoadInit();
+    },[])
+
     return (
         <div className={style.main_backgr} >
             <div className={style.main}>
@@ -64,12 +73,21 @@ const  Landing = () => {
                     <Autorize/>
                 </div>
                 <div className={style.galleryOne}>
-                    <LandingGallery imagesArr={images}/>
+                    <LandingGallery imagesArr={imgArr} />
                 </div>
             </div>
             <Footer />
         </div>
     )
 }
+const mapStateToProps = (state)=> {
+    return {
+        imgArr:state.fetchGalleryImages
+    }
+}
+const mapDispatchToProps = dispatch => bindActionCreators({
+    galeryLoadInit,
+  }, dispatch)
 
-export default Landing
+ export default connect( mapStateToProps, mapDispatchToProps)(Landing);
+

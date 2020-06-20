@@ -1,7 +1,7 @@
 import { createStore, applyMiddleware, compose } from 'redux'
 import createSagaMiddleware from 'redux-saga'
 import thunk from 'redux-thunk'
-import { saga } from '../sagas'
+import { root } from '../sagas'
 import RootReducer from '../reducers'
 
 const sagaMiddleware = createSagaMiddleware();
@@ -31,6 +31,6 @@ const store = createStore(
   composedEnhancers
 )
 
-sagaMiddleware.run(saga);
+sagaMiddleware.run(root);
 
 export default store

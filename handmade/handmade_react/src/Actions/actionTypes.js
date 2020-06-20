@@ -1,0 +1,3 @@
+export const GET_GALERY_IMAGES = 'GET_GALERY_IMAGES';
+export const GALERY_LOAD_INIT = 'GALERY_LOAD_INIT';
+export const NEXT_IMAGE = 'NEXT_IMAGE';
